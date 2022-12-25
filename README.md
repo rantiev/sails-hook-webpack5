@@ -1,6 +1,6 @@
 <img src="./logo.png">
 
-# :zap: sails-hook-webpack4 :zap:
+# :zap: sails-hook-webpack5 :zap:
 Sails hook to provide webpack in your Sails application.
 
 # Installation
@@ -15,7 +15,7 @@ editing the `.sailsrc` file in this way
 ```
 Install this hook
 ```
-yarn add sails-hook-webpack4
+npm i sails-hook-webpack5 --save
 ```
 Write your configuration in `config/webpack.js`, e.g.:
 ``` javascript
