@@ -33,7 +33,8 @@ module.exports = function webpackHook(sails) {
       const middleware = sails.config.http.middleware
 
       middleware.webpackDevMiddleware = webpackDevMiddleware(compiler, {
-        publicPath: webpackConfig.output.publicPath || '/'
+        publicPath: webpackConfig.output.publicPath || '/',
+        writeToDisk: true,
       })
       middleware.webpackHotMiddleware = webpackHotMiddleware(compiler)
 
