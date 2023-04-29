@@ -36,7 +36,10 @@ module.exports = function webpackHook(sails) {
         publicPath: webpackConfig.output.publicPath || '/',
         writeToDisk: true,
       })
-      middleware.webpackHotMiddleware = webpackHotMiddleware(compiler)
+
+      middleware.webpackHotMiddleware = webpackHotMiddleware(compiler, {
+        reload: true,
+      })
 
       middleware.order.unshift('webpackDevMiddleware', 'webpackHotMiddleware')
     }
